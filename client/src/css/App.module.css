@@ -1,0 +1,22 @@
+.App {
+  margin: 0;
+  width: 100vw;
+}
+
+.emailTo {
+  background-color: #072a40;
+  margin: 0;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+}
+
+.emailTo a {
+  color: #f9f7f0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  margin-inline-start: 5vw;
+  font-size: clamp(12px, 2vw, 15px);
+}
