@@ -1,0 +1,42 @@
+.people {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-block: 50px;
+  padding-inline: 10vw;
+}
+
+.people section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f7f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  color: #072a4086;
+  font-size: clamp(12px, 2vw, 14px);
+  font-style: italic;
+  max-width: 300px;
+}
+
+.people section img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+}
+
+.stars {
+  color: rgb(211, 181, 49);
+}
+
+@media (max-width: 770px) {
+  .people {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+}

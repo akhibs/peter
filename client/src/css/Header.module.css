@@ -1,0 +1,82 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  background-color: #f9f7f0;
+}
+
+.menu nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  font-size: clamp(12px, 1.5vw, 15px);
+  font-weight: 500;
+  padding-inline: 10vw;
+}
+
+.menu nav ul li a {
+  text-decoration: none;
+  color: #072a40c9;
+  cursor: pointer;
+}
+
+.menu nav ul li a:hover {
+  text-decoration: none;
+  color: #18b7be;
+  cursor: pointer;
+}
+
+.logo {
+  width: 45vw;
+  max-width: 200px;
+}
+
+.dropDownMenu {
+  position: absolute;
+  top: 110px;
+  left: 55vw;
+  background-color: #f9f7f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropDownMenuHidden {
+  display: none;
+}
+
+.dropDownMenu a {
+  border-bottom: 1px #072a4015 solid;
+  padding: 15px;
+  margin: 0;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #072a40;
+  text-decoration: none;
+}
+
+.hamBurgerMenu {
+  display: none;
+}
+
+.dropDownMenu a:hover {
+  color: #18b7be;
+}
+
+@media (max-width: 770px) {
+  .hamBurgerMenu {
+    display: flex;
+    margin-inline-end: 20px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .dropDownMenu {
+    display: none;
+  }
+}
