@@ -77,7 +77,7 @@ export default function AddNewPackage() {
   async function submitDetails() {
     try {
       const searchForDetails = await fetch(
-        "http://127.0.0.1:3000/add-details",
+        "https://peter-q6t3.onrender.com/add-details",
         {
           method: "POST",
           mode: "cors",

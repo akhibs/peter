@@ -15,7 +15,7 @@ export default function TrackingPage() {
 
   async function searchForGoods() {
     try {
-      const searchForDetails = await fetch("http://127.0.0.1:3000/id-search", {
+      const searchForDetails = await fetch("https://peter-q6t3.onrender.com/id-search", {
         method: "POST",
         mode: "cors",
         cache: "default",

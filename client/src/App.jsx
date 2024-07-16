@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     console.log("good");
-    fetch("http://127.0.0.1:3000/handshake");
+    fetch("https://peter-q6t3.onrender.com/handshake");
   });
 
   const router = createBrowserRouter([
