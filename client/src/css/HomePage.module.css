@@ -59,7 +59,7 @@
   position: relative;
   height: auto;
   width: auto;
-  background-image: url("background-image1.png");
+  background-image: url("/background-image1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -164,7 +164,7 @@
   position: relative;
   height: 800px;
   width: auto;
-  background-image: url("background-image2.png");
+  background-image: url("/background-image2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
