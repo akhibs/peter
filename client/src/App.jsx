@@ -89,7 +89,7 @@ function App() {
 
           <a href="#">FAQ</a>
           <a href="#">Contact</a>
-          <a href="#">Tracking</a>
+          <a href="/tracking">Tracking</a>
         </div>
       )}
 
