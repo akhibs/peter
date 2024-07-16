@@ -1,0 +1,40 @@
+[
+  {
+    "trackingNo": "1234567890",
+    "idNo": "1234",
+    "regNo": "2456",
+    "shipperInfo": {
+      "company": "Coal India Limited",
+      "companyDescription": "A marthanan company",
+      "companyAddress": "8GQW+799, Gevra, Chhattisgarh 495452",
+      "companyEmail": "www.gevragoldmine@gmail.com"
+    },
+    "recieverInfo": {
+      "name": "Linda Epicson",
+      "address": "659 McGee Dr Lot#114 Myrtle Beach, SC 29588",
+      "email": "Lindaepicson@gmail.com"
+    },
+    "shipmentInfo": {
+      "origin": "Chhattisgarh, India",
+      "destination": "659 McGee Dr Lot#114 Myrtle Beach, SC 29588",
+      "shipmentMode": "Air Freight",
+      "depatureDate": "June 17, 2024",
+      "expectedDeliveryDate": "June 30, 2024",
+      "comment": "That's a box measuring 120 by 65 by 60"
+    },
+    "packages": {
+      "quantity": "1",
+      "content": "High Profile Package",
+      "weight": "40kg"
+    },
+    "shipmentStatus": "Package On Hold",
+    "shipmentHistory": {
+      "origin": "Chhattisgarh, India",
+      "depatureDate": "June 17, 2024",
+      "currentLocation": "2000 Airport Rd NE, Calgary, AB T2E 6W5, Canada",
+      "arrivalDate": "june 30 2024",
+      "destination": "659 McGee Dr Lot#114 Myrtle Beach, SC 29588",
+      "expectedDeliveryDate": "June 30, 2024"
+    }
+  }
+]

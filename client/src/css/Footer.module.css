@@ -9,6 +9,7 @@
   flex-direction: column;
   color: #f9f7f0a9;
   background-color: #072a40;
+  min-height: 100vh;
 }
 
 .footerOptionBoxes {

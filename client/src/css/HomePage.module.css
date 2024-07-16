@@ -1,5 +1,6 @@
 .people {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   padding-block: 50px;
@@ -17,7 +18,8 @@
   color: #072a4086;
   font-size: clamp(12px, 2vw, 14px);
   font-style: italic;
-  max-width: 300px;
+  width: 250px;
+  height: fit-content;
 }
 
 .people section img {
@@ -31,12 +33,191 @@
   color: rgb(211, 181, 49);
 }
 
+.whatClientsSay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatClientsSay h3 {
+  font-size: clamp(30px, 5vw, 45px);
+  color: #072a40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.horizontalLine {
+  background-color: #178ca4;
+  width: 30%;
+  height: 5px;
+}
+
+.theBox {
+  position: relative;
+  height: auto;
+  width: auto;
+  background-image: url("background-image1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 10vw;
+}
+
+.theBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.theBox .getAQuote1 {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.getAQuote1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.getAQuote1 p {
+  color: #f9f7f0;
+}
+.getAQuote1 h3 {
+  font-size: clamp(30px, 5vw, 45px);
+  color: #f9f7f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.getAQuote1 button {
+  background-color: #178ca4;
+  color: #f9f7f0;
+  border: none;
+  width: 120px;
+  height: 45px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.getAQuote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.getAQuote2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.getAQuote2 div {
+  height: 200px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f9f7f0;
+  font-size: 2rem;
+}
+
+.getAQuote2 div span {
+  font-size: 0.8rem;
+}
+.getAQuoteBox1 {
+  background-color: #072a40;
+}
+
+.getAQuoteBox2 {
+  background-color: #178ca4;
+}
+
+.getAQuoteBox3 {
+  background-color: #072a40;
+}
+
+.getAQuoteBox4 {
+  background-color: #178ca4;
+}
+
+.coverBox {
+  position: relative;
+  height: 800px;
+  width: auto;
+  background-image: url("background-image2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 10vw;
+}
+
+.coverBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(6, 36, 49, 0.568);
+  z-index: 1;
+}
+
+.coverBox .cover {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover p {
+  color: #25d1f3;
+  font-size: clamp(10px, 5vw, 20px);
+  font-weight: 600;
+  text-align: center;
+}
+
+.cover h1 {
+  color: #f9f7f0;
+  font-size: clamp(30px, 5vw, 50px);
+  text-align: center;
+}
+
 @media (max-width: 770px) {
-  .people {
-    display: flex;
+  .getAQuote2 {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+  }
+
+  .getAQuote2 div {
+    width: 100%;
   }
 }

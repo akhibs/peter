@@ -4,7 +4,12 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { IoMdArrowDropdown, IoMdMail } from "react-icons/io";
 import styles from "./css/App.module.css";
-import { useState } from "react";
+import { Children, useState } from "react";
+import TrackingPage from "./pages/TrackingPage";
+import TrackingDetailsPage from "./pages/TrackingDetailsPage";
+import AdminDashboardPage from "./pages/AdminDashboardPage";
+import UpdatePackage from "./pages/UpdatePackage";
+import AddNewPackage from "./pages/AddNewPackage";
 
 function App() {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
@@ -14,11 +19,30 @@ function App() {
       path: "/",
       element: <HomePage />,
     },
+    {
+      path: "tracking",
+      element: <TrackingPage />,
+    },
+    {
+      path: "tracking/:id",
+      element: <TrackingDetailsPage />,
+    },
+    {
+      path: "admin",
+      element: <AdminDashboardPage />,
+    },
+    {
+      path: "admin/add-new-package",
+      element: <AddNewPackage />,
+    },
+    {
+      path: "admin/update-package",
+      element: <UpdatePackage />,
+    },
   ]);
 
   function onHamburgerClick() {
     setShowHamburgerMenu((x) => !x);
-    
   }
 
   return (
@@ -29,7 +53,10 @@ function App() {
           support@someone@example.com
         </a>
       </p>
-      <Header onHamburgerClick={ onHamburgerClick } showHamburgerMenu={ showHamburgerMenu} />
+      <Header
+        onHamburgerClick={onHamburgerClick}
+        showHamburgerMenu={showHamburgerMenu}
+      />
 
       {showHamburgerMenu ? (
         <div className={styles.hamburgerDropDownMenu}>
