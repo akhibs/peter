@@ -39,7 +39,7 @@ export default function Header({ onHamburgerClick, showHamburgerMenu }) {
               <a href={"#"}>Contact</a>
             </li>
             <li>
-              <a href={"/tracking"}>Tracking</a>
+              <a href={"/tracking"}>Traccking</a>
             </li>
           </ul>
         </nav>
