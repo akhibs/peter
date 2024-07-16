@@ -55,15 +55,7 @@
   text-align: center;
 }
 
-.theTrackingCover button {
-  background-color: #178ca4;
-  color: #f9f7f0;
-  border: none;
-  width: 120px;
-  height: 45px;
-  font-size: 1rem;
-  font-weight: 600;
-}
+
 
 .searchBarBox {
   display: flex;

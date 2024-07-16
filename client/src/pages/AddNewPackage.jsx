@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./../css/AddNewPackage.module.css";
 
 export default function AddNewPackage() {
-  const [errorMsg, setErrorMsg] = useState("✔ New User Added");
+  const [errorMsg, setErrorMsg] = useState("");
   const [trackingNo, setTrackingNo] = useState("");
   const [idNo, setIdNo] = useState("");
   const [regNo, setRegNo] = useState("");
@@ -19,6 +19,9 @@ export default function AddNewPackage() {
   const [depatureDate, setDepatureDate] = useState("");
   const [deliveryDate, setDeliveryDate] = useState("");
   const [comment, setComment] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [content, setContent] = useState("");
+  const [weight, setWeight] = useState("");
   const [shipmentStatus, setShipmentStatus] = useState("");
   const [currentLocation, setCurrentLocaion] = useState("");
   const [arrivalDate, setArrivalDate] = useState("");
@@ -56,6 +59,12 @@ export default function AddNewPackage() {
       setDeliveryDate(e.target.value);
     } else if (e.target.name === "comment") {
       setComment(e.target.value);
+    } else if (e.target.name === "quantity") {
+      setQuantity(e.target.value);
+    } else if (e.target.name === "content") {
+      setContent(e.target.value);
+    } else if (e.target.name === "weight") {
+      setWeight(e.target.value);
     } else if (e.target.name === "shipmentStatus") {
       setShipmentStatus(e.target.value);
     } else if (e.target.name === "currentLocation") {
@@ -64,6 +73,90 @@ export default function AddNewPackage() {
       setArrivalDate(e.target.value);
     }
   }
+
+  async function submitDetails() {
+    try {
+      const searchForDetails = await fetch(
+        "http://127.0.0.1:3000/add-details",
+        {
+          method: "POST",
+          mode: "cors",
+          cache: "default",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "application/json;charset=utf-8",
+            Accept: "application/json",
+          },
+          redirect: "follow",
+          referrerPolicy: "no-referrer",
+          body: JSON.stringify({
+            trackingNo,
+            idNo,
+            regNo,
+            company,
+            companyDescription,
+            companyAddress,
+            companyEmail,
+            name,
+            address,
+            email,
+            origin,
+            destination,
+            shipmentMode,
+            depatureDate,
+            deliveryDate,
+            comment,
+            quantity,
+            content,
+            weight,
+            shipmentStatus,
+            currentLocation,
+            arrivalDate,
+          }),
+        }
+      );
+
+      const response = await searchForDetails.json();
+
+      if (response.status === "good") {
+        setErrorMsg("Added Successfully");
+        setTimeout(() => {
+          setErrorMsg("");
+        }, 3000);
+      }
+
+      //=======================
+      setTrackingNo("");
+      setIdNo("");
+      setRegNo("");
+      setCompany("");
+      setcompanyDescription("");
+      setCompanyAddress("");
+      setEmail("");
+      setName("");
+      setAddress("");
+      setEmail("");
+      setOrigin("");
+      setDestination("");
+      setShipmentMode("");
+      setDepatureDate("");
+      setDeliveryDate("");
+      setComment("");
+      setQuantity("");
+      setContent("");
+      setWeight("");
+      setShipmentStatus("");
+      setCurrentLocaion("");
+      setArrivalDate("");
+      //===================
+    } catch (e) {
+      setErrorMsg("An Error Occured Please try again");
+      setTimeout(() => {
+        setErrorMsg("");
+      }, 3000);
+    }
+  }
+
   return (
     <div className={styles.AddNewPackage}>
       <p>Tracking No</p>
@@ -153,6 +246,22 @@ export default function AddNewPackage() {
         type="text"
         value={comment}
       />
+      <p>Quantity</p>
+      <input
+        onChange={changeInput}
+        name="quantity"
+        type="text"
+        value={quantity}
+      />
+      <p>content</p>
+      <input
+        onChange={changeInput}
+        name="content"
+        type="text"
+        value={content}
+      />
+      <p>weight</p>
+      <input onChange={changeInput} name="weight" type="text" value={weight} />
       <p>shipment Status</p>
       <input
         onChange={changeInput}
@@ -174,8 +283,8 @@ export default function AddNewPackage() {
         type="text"
         value={arrivalDate}
       />
-      <button>Add User</button>
-      <span>{errorMsg}</span>
+      <button onClick={submitDetails}>Add User</button>
+      <p>{errorMsg}</p>
     </div>
   );
 }

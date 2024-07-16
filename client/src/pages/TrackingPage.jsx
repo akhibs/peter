@@ -48,7 +48,7 @@ export default function TrackingPage() {
       }, 3000);
     }
 
-    // navigate(`${searchBarValue}`, { state: trackingId });
+  
   }
 
   return (

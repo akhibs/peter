@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { IoMdArrowDropdown, IoMdMail } from "react-icons/io";
 import styles from "./css/App.module.css";
-import { Children, useState } from "react";
+import { Children, useEffect, useState } from "react";
 import TrackingPage from "./pages/TrackingPage";
 import TrackingDetailsPage from "./pages/TrackingDetailsPage";
 import AdminDashboardPage from "./pages/AdminDashboardPage";
@@ -13,6 +13,11 @@ import AddNewPackage from "./pages/AddNewPackage";
 
 function App() {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+
+  useEffect(() => {
+    console.log("good");
+    fetch("http://127.0.0.1:3000/handshake");
+  });
 
   const router = createBrowserRouter([
     {
