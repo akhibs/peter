@@ -8,16 +8,15 @@ import { Children, useEffect, useState } from "react";
 import TrackingPage from "./pages/TrackingPage";
 import TrackingDetailsPage from "./pages/TrackingDetailsPage";
 import AdminDashboardPage from "./pages/AdminDashboardPage";
-import UpdatePackage from "./pages/UpdatePackage";
 import AddNewPackage from "./pages/AddNewPackage";
+import EditPackage from "./pages/EditPackage";
 
 function App() {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+  //https://peter-q6t3.onrender.com/handshake
+  //http://127.0.0.1:3000/handshake
 
-  useEffect(() => {
-    console.log("good");
-    fetch("https://peter-q6t3.onrender.com/handshake");
-  });
+  fetch("http://127.0.0.1:3000/handshake");
 
   const router = createBrowserRouter([
     {
@@ -41,8 +40,8 @@ function App() {
       element: <AddNewPackage />,
     },
     {
-      path: "admin/update-package",
-      element: <UpdatePackage />,
+      path: "admin/edit-package",
+      element: <EditPackage />,
     },
   ]);
 

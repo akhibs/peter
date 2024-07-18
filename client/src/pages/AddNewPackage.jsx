@@ -25,8 +25,10 @@ export default function AddNewPackage() {
   const [shipmentStatus, setShipmentStatus] = useState("");
   const [currentLocation, setCurrentLocaion] = useState("");
   const [arrivalDate, setArrivalDate] = useState("");
+  const [userImage, setUserImage] = useState(null);
 
   function changeInput(e) {
+    e.preventDefault();
     if (e.target.name === "trackingNo") {
       setTrackingNo(e.target.value);
     } else if (e.target.name === "idNo") {
@@ -71,11 +73,49 @@ export default function AddNewPackage() {
       setCurrentLocaion(e.target.value);
     } else if (e.target.name === "arrivalDate") {
       setArrivalDate(e.target.value);
+    } else if (e.target.name === "userImage") {
+      setUserImage(e.target.files[0]);
+      e.target.value = "";
+      console.log(userImage);
     }
   }
 
   async function submitDetails() {
+    //https://peter-q6t3.onrender.com/add-details
+    //http://127.0.0.1:3000/add-details
+    //http://192.168.0.129:3000/add-details
+
     try {
+      const formData = new FormData();
+      formData.append("image", userImage);
+      formData.append(
+        "json",
+        JSON.stringify({
+          trackingNo,
+          idNo,
+          regNo,
+          company,
+          companyDescription,
+          companyAddress,
+          companyEmail,
+          name,
+          address,
+          email,
+          origin,
+          destination,
+          shipmentMode,
+          depatureDate,
+          deliveryDate,
+          comment,
+          quantity,
+          content,
+          weight,
+          shipmentStatus,
+          currentLocation,
+          arrivalDate,
+        })
+      );
+
       const searchForDetails = await fetch(
         "https://peter-q6t3.onrender.com/add-details",
         {
@@ -83,36 +123,9 @@ export default function AddNewPackage() {
           mode: "cors",
           cache: "default",
           credentials: "same-origin",
-          headers: {
-            "Content-Type": "application/json;charset=utf-8",
-            Accept: "application/json",
-          },
           redirect: "follow",
           referrerPolicy: "no-referrer",
-          body: JSON.stringify({
-            trackingNo,
-            idNo,
-            regNo,
-            company,
-            companyDescription,
-            companyAddress,
-            companyEmail,
-            name,
-            address,
-            email,
-            origin,
-            destination,
-            shipmentMode,
-            depatureDate,
-            deliveryDate,
-            comment,
-            quantity,
-            content,
-            weight,
-            shipmentStatus,
-            currentLocation,
-            arrivalDate,
-          }),
+          body: formData,
         }
       );
 
@@ -123,32 +136,32 @@ export default function AddNewPackage() {
         setTimeout(() => {
           setErrorMsg("");
         }, 3000);
-      }
 
-      //=======================
-      setTrackingNo("");
-      setIdNo("");
-      setRegNo("");
-      setCompany("");
-      setcompanyDescription("");
-      setCompanyAddress("");
-      setEmail("");
-      setName("");
-      setAddress("");
-      setEmail("");
-      setOrigin("");
-      setDestination("");
-      setShipmentMode("");
-      setDepatureDate("");
-      setDeliveryDate("");
-      setComment("");
-      setQuantity("");
-      setContent("");
-      setWeight("");
-      setShipmentStatus("");
-      setCurrentLocaion("");
-      setArrivalDate("");
-      //===================
+        //=======================
+        setTrackingNo("");
+        setIdNo("");
+        setRegNo("");
+        setCompany("");
+        setcompanyDescription("");
+        setCompanyAddress("");
+        setEmail("");
+        setName("");
+        setAddress("");
+        setEmail("");
+        setOrigin("");
+        setDestination("");
+        setShipmentMode("");
+        setDepatureDate("");
+        setDeliveryDate("");
+        setComment("");
+        setQuantity("");
+        setContent("");
+        setWeight("");
+        setShipmentStatus("");
+        setCurrentLocaion("");
+        setArrivalDate("");
+        //===================
+      }
     } catch (e) {
       setErrorMsg("An Error Occured Please try again");
       setTimeout(() => {
@@ -283,6 +296,8 @@ export default function AddNewPackage() {
         type="text"
         value={arrivalDate}
       />
+      <p>User Image</p>
+      <input onChange={changeInput} name="userImage" type="file" />
       <button onClick={submitDetails}>Add User</button>
       <p>{errorMsg}</p>
     </div>

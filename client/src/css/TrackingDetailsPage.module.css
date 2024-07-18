@@ -1,10 +1,3 @@
-.TrackingDetailsPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .horizontalLine {
   background-color: #178ca4;
   width: 30%;
@@ -14,7 +7,7 @@
 .theTrackingDetailsBox {
   position: relative;
   height: auto;
-  width: 100%;
+  width: auto;
   background-image: url("/background-image2.png");
   background-size: cover;
   background-position: center;
@@ -23,7 +16,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-inline: 10vw;
 }
 
 .theTrackingDetailsBox::before {
@@ -31,7 +23,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: auto;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
@@ -48,7 +40,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: auto;
 }
 
 .theTrackingDetailsCover p {
@@ -64,11 +56,27 @@
   text-align: center;
 }
 
+.image {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 30px;
+}
+
+.userPhoto {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  border: 5px solid #178ca4;
+}
+
 .numbers {
   margin-block: 30px;
   display: flex;
+
   flex-wrap: wrap;
-  width: 100%;
+  width: auto;
   justify-content: space-around;
 }
 
@@ -91,21 +99,25 @@
 
 .shipperReciever {
   margin-block: 30px;
-  width: 100%;
+  width: auto;
+  margin-inline: 3vw;
 }
 
 .shipperReciever div div p {
   color: #072a409d;
   font-weight: 500;
+  width: auto;
 }
 
 .shipperReciever div div {
   border: #18b6be63 1px solid;
-  padding-inline: 6%;
+  width: auto;
+  padding-inline: 5%;
 }
 
 .shipperReciever div h3 {
   color: #072a40;
+  width: auto;
 }
 .icon {
   color: #178ca4;
@@ -113,7 +125,7 @@
 
 .shipmentInfo {
   margin-block: 30px;
-  width: 100%;
+  width: auto;
 }
 
 .shipmentInfo h3 {
@@ -138,8 +150,9 @@
 
 .packages {
   margin-block: 30px;
-  width: 100%;
+  width: auto;
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -163,7 +176,7 @@
 }
 
 .shipmentStatus {
-  width: 100%;
+  width: auto;
   margin-inline: auto;
   width: 80%;
   min-width: 240px;
@@ -186,7 +199,7 @@
 }
 
 .shipmentHistory {
-  width: 100%;
+  width: 100vw;
   margin-block: 30px;
 }
 
@@ -197,7 +210,7 @@
 .shipmentHistory div {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .shipmentHistory div div {
@@ -206,6 +219,5 @@
   height: 200px;
   min-width: 240px;
   display: block;
-  margin-block: 10px;
-  padding-inline: 1%;
+  padding-inline: 1vw;
 }

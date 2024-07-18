@@ -1,5 +1,7 @@
 const data = require("./../data.json");
 const fs = require("fs");
+const multer = require("multer");
+const path = require("path");
 
 exports.handshake = (req, res) => {
   console.log("shaked");
@@ -7,13 +9,130 @@ exports.handshake = (req, res) => {
 };
 
 exports.addDetails = (req, res) => {
-  console.log(req.body);
+  let reqBody = {};
+  let imageName = "";
 
-  const newData = data;
+  //==========================================
+  const storage = multer.diskStorage({
+    destination: "./uploads/",
+    filename: (req, file, cb) => {
+      cb(
+        null,
+        file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+      );
+      imageName =
+        file.fieldname + "-" + Date.now() + path.extname(file.originalname);
+    },
+  });
 
-  newData.push(req.body);
+  const upload = multer({
+    storage: storage,
+    limits: { fileSize: 9000000 },
+    fileFilter: (req, file, cb) => {
+      checkFileType(file, cb);
+    },
+  }).single("image");
 
-  const stringedData = JSON.stringify(newData, null, 2);
+  function checkFileType(file, cb) {
+    const filetypes = /jpeg|jpg|png|gif/;
+    const extname = filetypes.test(
+      path.extname(file.originalname).toLowerCase()
+    );
+    const mimetype = filetypes.test(file.mimetype);
+
+    if (mimetype && extname) {
+      return cb(null, true);
+    } else {
+      cb("Error: Images only!");
+    }
+  }
+
+  upload(req, res, (err) => {
+    reqBody = JSON.parse(req.body.json);
+
+    console.log(imageName);
+    if (err) {
+      console.log("error in upload ooo");
+    } else {
+      if (req.file === undefined) {
+        console.log("undefined ooo");
+      } else {
+        const dataSignature = {
+          trackingNo: reqBody.trackingNo,
+          idNo: reqBody.idNo,
+          regNo: reqBody.regNo,
+          shipperInfo: {
+            company: reqBody.company,
+            companyDescription: reqBody.companyDescription,
+            companyAddress: reqBody.companyAddress,
+            companyEmail: reqBody.companyEmail,
+          },
+          recieverInfo: {
+            name: reqBody.name,
+            address: reqBody.address,
+            email: reqBody.email,
+          },
+          shipmentInfo: {
+            origin: reqBody.origin,
+            destination: reqBody.destination,
+            shipmentMode: reqBody.shipmentMode,
+            depatureDate: reqBody.depatureDate,
+            expectedDeliveryDate: reqBody.deliveryDate,
+            comment: reqBody.comment,
+          },
+          packages: {
+            quantity: reqBody.quantity,
+            content: reqBody.content,
+            weight: reqBody.weight,
+          },
+          shipmentStatus: reqBody.shipmentStatus,
+          shipmentHistory: {
+            origin: reqBody.origin,
+            depatureDate: reqBody.depatureDate,
+            currentLocation: reqBody.currentLocation,
+            arrivalDate: reqBody.arrivalDate,
+            destination: reqBody.destination,
+            expectedDeliveryDate: reqBody.deliveryDate,
+          },
+          image: imageName,
+        };
+
+        const newData = data;
+        newData.push(dataSignature);
+
+        const stringedData = JSON.stringify(newData, null, 2);
+
+        fs.writeFile("data.json", stringedData, (err) => {
+          if (err) {
+            console.log("error writinf dile");
+          } else {
+            console.log("succes");
+          }
+        });
+        console.log("package added");
+
+        res.status(200).json({
+          status: "good",
+        });
+      }
+    }
+  });
+  //=================================================
+};
+
+exports.editDetails = (req, res) => {
+  let status = "notFound";
+
+  const updatedData = data.map((e) => {
+    if (e.trackingNo === req.body.trackingNo) {
+      e.shipmentStatus = req.body.shipmentStatus;
+      e.shipmentHistory.currentLocation = req.body.currentLocation;
+      status = "good";
+    }
+    return e;
+  });
+
+  const stringedData = JSON.stringify(updatedData, null, 2);
 
   fs.writeFile("data.json", stringedData, (err) => {
     if (err) {
@@ -22,10 +141,9 @@ exports.addDetails = (req, res) => {
       console.log("succes");
     }
   });
-  console.log(console.log(stringedData));
 
   res.status(200).json({
-    status: "good",
+    status,
   });
 };
 
@@ -40,6 +158,20 @@ exports.idSearch = (req, res) => {
     status: "good",
     foundData,
   });
+};
+
+exports.getImage = (req, res) => {
+  const fileName = data.map((e) => {
+    if (e.trackingNo === req.params.id) {
+      return e.image;
+    }
+  });
+
+  console.log(fileName[0]);
+  const filePath = path.join(__dirname, "..", "uploads", fileName[0]);
+
+  console.log(filePath);
+  res.sendFile(filePath);
 };
 
 exports.test = (req, res) => {

@@ -7,6 +7,8 @@ export default function TrackingPage() {
   const [searchBarValue, setSearchBarValue] = useState("");
   const [errorStatus, setErrorStatus] = useState("");
 
+  fetch("https://peter-q6t3.onrender.com/handshake");
+
   const navigate = useNavigate();
 
   function searchBarInput(e) {
@@ -14,22 +16,27 @@ export default function TrackingPage() {
   }
 
   async function searchForGoods() {
+    //https://peter-q6t3.onrender.com/id-search
+    //http://127.0.0.1:3000/id-search
     try {
-      const searchForDetails = await fetch("https://peter-q6t3.onrender.com/id-search", {
-        method: "POST",
-        mode: "cors",
-        cache: "default",
-        credentials: "same-origin",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-          Accept: "application/json",
-        },
-        redirect: "follow",
-        referrerPolicy: "no-referrer",
-        body: JSON.stringify({
-          searchBarValue,
-        }),
-      });
+      const searchForDetails = await fetch(
+        "https://peter-q6t3.onrender.com/id-search",
+        {
+          method: "POST",
+          mode: "cors",
+          cache: "default",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "application/json;charset=utf-8",
+            Accept: "application/json",
+          },
+          redirect: "follow",
+          referrerPolicy: "no-referrer",
+          body: JSON.stringify({
+            searchBarValue,
+          }),
+        }
+      );
 
       const response = await searchForDetails.json();
 
@@ -39,7 +46,15 @@ export default function TrackingPage() {
           setErrorStatus("");
         }, 3000);
       } else {
-        navigate(`${searchBarValue}`, { state: response.foundData });
+        const imageFetch = await fetch(
+          `https://peter-q6t3.onrender.com/image/${searchBarValue}`
+        );
+        const blob = await imageFetch.blob();
+        const imageUrl = URL.createObjectURL(blob);
+
+        navigate(`${searchBarValue}`, {
+          state: { a: response.foundData, b: imageUrl },
+        });
       }
     } catch (e) {
       setErrorStatus(" error in connection. try agin in 10sec");
@@ -47,8 +62,6 @@ export default function TrackingPage() {
         setErrorStatus("");
       }, 3000);
     }
-
-  
   }
 
   return (

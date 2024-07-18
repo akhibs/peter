@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./../css/Footer.module.css";
-import logo from "./../assets/logo.png";
+import logo from "./../assets/logo2.png";
 import { IoMdMail } from "react-icons/io";
 
 export default function Footer() {

@@ -3,7 +3,7 @@
   justify-content: space-between;
   height: 70px;
   align-items: center;
-  background-color: #f9f7f0;
+  background-color: #f8f9fa;
 }
 
 .menu nav ul {
@@ -28,15 +28,15 @@
 }
 
 .logo {
-  width: 45vw;
-  max-width: 200px;
+  width: 30vw;
+  max-width: 150px;
 }
 
 .dropDownMenu {
   position: absolute;
   top: 110px;
   left: 55vw;
-  background-color: #f9f7f0;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
 }
@@ -70,6 +70,8 @@
   .hamBurgerMenu {
     display: flex;
     margin-inline-end: 20px;
+    font-size: 2rem;
+    font-weight: 1000;
   }
 
   .menu {

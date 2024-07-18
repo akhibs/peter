@@ -6,6 +6,7 @@
 .Footer {
   width: 100%;
   display: flex;
+
   flex-direction: column;
   color: #f9f7f0a9;
   background-color: #072a40;
@@ -32,7 +33,7 @@
 }
 .footerOptionBoxes section h3 {
   font-size: clamp(20px, 2vw, 30px);
-  color: #f9f7f0;
+  color: #ffffff;
 }
 
 .allRightsReserved {

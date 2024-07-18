@@ -6,7 +6,7 @@
 .emailTo {
   background-color: #072a40;
   margin: 0;
-  height: 7vh;
+  height: 5vh;
   display: flex;
   align-items: center;
 }
@@ -23,6 +23,7 @@
 
 .hamburgerDropDownMenu {
   display: none;
+  transition-timing-function: ease-in;
 }
 
 .hamburgerDropDownMenuHidden {
@@ -31,7 +32,7 @@
 
 @media (max-width: 770px) {
   .hamburgerDropDownMenu {
-    background-color: #f9f7f0;
+    background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
     width: auto;
@@ -45,7 +46,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: 500;
     color: #072a40;
     text-decoration: none;
   }

@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 30px;
   padding-block: 50px;
-  padding-inline: 10vw;
+  padding-inline: 1vw;
 }
 
 .people section {
@@ -12,13 +12,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f9f7f0;
+  background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px;
   color: #072a4086;
-  font-size: clamp(12px, 2vw, 14px);
+  font-size: clamp(16px, 2vw, 18px);
   font-style: italic;
-  width: 250px;
+  min-width: 250px;
+  max-width: 300px;
+  width: 80%;
   height: fit-content;
 }
 
@@ -95,11 +97,11 @@
 }
 
 .getAQuote1 p {
-  color: #f9f7f0;
+  color: #ffffff;
 }
 .getAQuote1 h3 {
   font-size: clamp(30px, 5vw, 45px);
-  color: #f9f7f0;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,7 +110,7 @@
 
 .getAQuote1 button {
   background-color: #178ca4;
-  color: #f9f7f0;
+  color: #ffffff;
   border: none;
   width: 120px;
   height: 45px;
