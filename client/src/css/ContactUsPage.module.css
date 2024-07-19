@@ -1,0 +1,115 @@
+.ContactUsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.theContactUsBox {
+  position: relative;
+  height: auto;
+  width: auto;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 10vw;
+}
+
+.theContactUsBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  z-index: 1;
+}
+
+.theContactUsBox .theContactUsCover {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.theContactUsCover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.theContactUsCover p {
+  color: #f9f7f0;
+}
+.theContactUsCover h3 {
+  font-size: clamp(30px, 5vw, 45px);
+  color: #f9f7f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contactBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-block: 40px;
+}
+
+.contactBox section {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  min-width: 250px;
+  gap: 20px;
+}
+
+.first a {
+  text-decoration: none;
+  color: black;
+}
+
+.icon {
+  color: #c41e3a;
+}
+
+.name {
+  border: 1px rgba(0, 0, 0, 0.507) solid;
+  width: 100%;
+  height: 35px;
+  padding-inline: 10px;
+}
+
+.email {
+  border: 1px rgba(0, 0, 0, 0.507) solid;
+  width: 100%;
+  height: 35px;
+  padding-inline: 10px;
+}
+
+.textarea {
+  border: 1px rgba(0, 0, 0, 0.507) solid;
+  width: 100%;
+  height: 70px;
+  padding-inline: 10px;
+}
+
+.second button {
+  height: 40px;
+  width: 150px;
+  background-color: #c41e3a;
+  color: white;
+  font-weight: 600;
+  border: none;
+}
+
+.second button:hover {
+  background-color: #000000;
+  color: white;
+}

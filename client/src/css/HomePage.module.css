@@ -15,7 +15,7 @@
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  color: #072a4086;
+  color: black;
   font-size: clamp(16px, 2vw, 18px);
   font-style: italic;
   min-width: 250px;
@@ -32,7 +32,7 @@
 }
 
 .stars {
-  color: rgb(211, 181, 49);
+  color: rgb(255, 208, 0);
 }
 
 .whatClientsSay {
@@ -44,7 +44,7 @@
 
 .whatClientsSay h3 {
   font-size: clamp(30px, 5vw, 45px);
-  color: #072a40;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +52,7 @@
 }
 
 .horizontalLine {
-  background-color: #178ca4;
+  background-color: #c41e3a;
   width: 30%;
   height: 5px;
 }
@@ -109,7 +109,7 @@
 }
 
 .getAQuote1 button {
-  background-color: #178ca4;
+  background-color: #c41e3a;
   color: #ffffff;
   border: none;
   width: 120px;
@@ -139,7 +139,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #f9f7f0;
+  color: white;
   font-size: 2rem;
 }
 
@@ -147,19 +147,19 @@
   font-size: 0.8rem;
 }
 .getAQuoteBox1 {
-  background-color: #072a40;
+  background-color: black;
 }
 
 .getAQuoteBox2 {
-  background-color: #178ca4;
+  background-color: #c41e3a;
 }
 
 .getAQuoteBox3 {
-  background-color: #072a40;
+  background-color: black;
 }
 
 .getAQuoteBox4 {
-  background-color: #178ca4;
+  background-color: #c41e3a;
 }
 
 .coverBox {
@@ -202,14 +202,14 @@
 }
 
 .cover p {
-  color: #25d1f3;
+  color: white;
   font-size: clamp(10px, 5vw, 20px);
   font-weight: 600;
   text-align: center;
 }
 
 .cover h1 {
-  color: #f9f7f0;
+  color: white;
   font-size: clamp(30px, 5vw, 50px);
   text-align: center;
 }

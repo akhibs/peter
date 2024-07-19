@@ -9,7 +9,10 @@ export default function Header({ onHamburgerClick, showHamburgerMenu }) {
 
   return (
     <div className={styles.Header}>
-      <img className={styles.logo} src={logo} />
+      <a href="/">
+        {" "}
+        <img className={styles.logo} src={logo} />
+      </a>
       <section className={styles.hamBurgerMenu} onClick={onHamburgerClick}>
         {showHamburgerMenu ? <IoMdClose /> : <RxHamburgerMenu />}
       </section>
@@ -18,10 +21,10 @@ export default function Header({ onHamburgerClick, showHamburgerMenu }) {
         <nav>
           <ul>
             <li>
-              <a href={"#"}>Home</a>
+              <a href={"/"}>Home</a>
             </li>
             <li>
-              <a href={"#"}>About</a>
+              <a href={"/about-us"}>About</a>
             </li>
             <li>
               <a
@@ -36,7 +39,7 @@ export default function Header({ onHamburgerClick, showHamburgerMenu }) {
               <a href={"#"}>FAQ</a>
             </li>
             <li>
-              <a href={"#"}>Contact</a>
+              <a href={"/contact-us"}>Contact</a>
             </li>
             <li>
               <a href={"/tracking"}>Traccking</a>

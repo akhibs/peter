@@ -1,10 +1,9 @@
 .App {
   margin: 0;
-  width: 100vw;
 }
 
 .emailTo {
-  background-color: #072a40;
+  background-color: black;
   margin: 0;
   height: 5vh;
   display: flex;
@@ -12,7 +11,7 @@
 }
 
 .emailTo a {
-  color: #f9f7f0;
+  color: white;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -32,14 +31,14 @@
 
 @media (max-width: 770px) {
   .hamburgerDropDownMenu {
-    background-color: #f8f9fa;
+    background-color: white;
     display: flex;
     flex-direction: column;
     width: auto;
   }
 
   .hamburgerDropDownMenu a {
-    border-bottom: 1px #072a4015 solid;
+    border-bottom: 1px black solid;
     padding: 15px;
     margin: 0;
     width: auto;
@@ -48,12 +47,12 @@
     justify-content: center;
     font-size: 15px;
     font-weight: 500;
-    color: #072a40;
+    color: black;
     text-decoration: none;
   }
 
   .hamburgerDropDownMenu a:hover {
-    color: #18b7be;
+    color: #c41e3a;
   }
 
   .hamburgerDropDownMenuHidden {

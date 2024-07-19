@@ -10,6 +10,8 @@ import TrackingDetailsPage from "./pages/TrackingDetailsPage";
 import AdminDashboardPage from "./pages/AdminDashboardPage";
 import AddNewPackage from "./pages/AddNewPackage";
 import EditPackage from "./pages/EditPackage";
+import AboutUsPage from "./pages/AboutUsPage";
+import ContactUsPage from "./pages/ContactUsPage";
 
 function App() {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
@@ -43,6 +45,14 @@ function App() {
       path: "admin/edit-package",
       element: <EditPackage />,
     },
+    {
+      path: "about-us",
+      element: <AboutUsPage />,
+    },
+    {
+      path: "contact-us",
+      element: <ContactUsPage />,
+    },
   ]);
 
   function onHamburgerClick() {
@@ -66,28 +76,28 @@ function App() {
         <div className={styles.hamburgerDropDownMenu}>
           <a href="#">Home</a>
 
-          <a href="#">About</a>
+          <a href="/about-us">About</a>
 
           <a href="#">
             Our Solutuion <IoMdArrowDropdown />
           </a>
 
           <a href="#">FAQ</a>
-          <a href="#">Contact</a>
+          <a href="/contact-us">Contact</a>
           <a href="/tracking">Tracking</a>
         </div>
       ) : (
         <div className={styles.hamburgerDropDownMenuHidden}>
           <a href="#">Home</a>
 
-          <a href="#">About</a>
+          <a href="/about-us">About</a>
 
           <a href="#">
             Our Solutuion <IoMdArrowDropdown />
           </a>
 
           <a href="#">FAQ</a>
-          <a href="#">Contact</a>
+          <a href="/contact-us">Contact</a>
           <a href="/tracking">Traccking</a>
         </div>
       )}
