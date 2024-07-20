@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function AdminDashboardPage() {
-  fetch("https://peter-q6t3.onrender.com/handshake");
+  useEffect(() => {
+    fetch("https://peter-q6t3.onrender.com/handshake");
+  });
+
   const navigate = useNavigate();
   return (
     <div>

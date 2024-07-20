@@ -27,6 +27,10 @@
   gap: 10px;
 }
 
+.thirdOptions a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.774);
+}
 .fourthOptions a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.774);

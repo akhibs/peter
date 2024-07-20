@@ -7,7 +7,9 @@ export default function TrackingPage() {
   const [searchBarValue, setSearchBarValue] = useState("");
   const [errorStatus, setErrorStatus] = useState("");
 
-  fetch("https://peter-q6t3.onrender.com/handshake");
+  useEffect(() => {
+    fetch("https://peter-q6t3.onrender.com/handshake");
+  });
 
   const navigate = useNavigate();
 

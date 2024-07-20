@@ -24,10 +24,13 @@ export default function Footer() {
         </section>
         <section className={styles.thirdOptions}>
           <h3>Our Solutions</h3>
-          <a>Air Frieght Forwarding</a>
-          <a>Road Frieght Forwarding</a>
-          <a>Ocean Frieght Forwarding</a>
-          <a>WareHouse & Storage</a>
+          <a href="/air-freight-forwarding">Air Frieght Forwarding</a>
+
+          <a href="/road-freight-forwarding">Road Frieght Forwarding</a>
+
+          <a href="/ocean-freight-forwarding">Ocean Frieght Forwarding</a>
+
+          <a href="/warehouse-and-storage">WareHouse And Storage</a>
         </section>
         <section className={styles.fourthOptions}>
           <h3>Contact us</h3>

@@ -42,7 +42,7 @@ export default function Header({ onHamburgerClick, showHamburgerMenu }) {
               <a href={"/contact-us"}>Contact</a>
             </li>
             <li>
-              <a href={"/tracking"}>Traccking</a>
+              <a href={"/tracking"}>Tracking</a>
             </li>
           </ul>
         </nav>
@@ -50,23 +50,23 @@ export default function Header({ onHamburgerClick, showHamburgerMenu }) {
 
       {showOurSolution ? (
         <div className={styles.dropDownMenu}>
-          <a href="#">Air Frieght Forwarding</a>
+          <a href="/air-freight-forwarding">Air Frieght Forwarding</a>
 
-          <a href="#">Road Frieght Forwarding</a>
+          <a href="/road-freight-forwarding">Road Frieght Forwarding</a>
 
-          <a href="#">Ocean Frieght Forwarding</a>
+          <a href="/ocean-freight-forwarding">Ocean Frieght Forwarding</a>
 
-          <a href="#">WareJouse And Storage</a>
+          <a href="warehouse-and-storage">WareHouse And Storage</a>
         </div>
       ) : (
         <div className={styles.dropDownMenuHidden}>
-          <a href="#">Air Frieght Forwarding</a>
+          <a href="/air-freight-forwarding">Air Frieght Forwarding</a>
 
-          <a href="#">Road Frieght Forwarding</a>
+          <a href="/road-freight-forwarding">Road Frieght Forwarding</a>
 
-          <a href="#">Ocean Frieght Forwarding</a>
+          <a href="/ocean-freight-forwarding">Ocean Frieght Forwarding</a>
 
-          <a href="#">WareJouse And Storage</a>
+          <a href="warehouse-and-storage">WareHouse And Storage</a>
         </div>
       )}
     </div>
