@@ -17,10 +17,10 @@ export default function Footer() {
         </section>
         <section className={styles.secondOptions}>
           <h3>Quick Links</h3>
-          <a>Home</a>
-          <a>About Us</a>
-          <a>Contact us</a>
-          <a>FAQ</a>
+          <a href="/">Home</a>
+          <a href="/about-us">About Us</a>
+          <a href="/contact-us">Contact us</a>
+          <a href="/frequently-asked-questions">FAQ</a>
         </section>
         <section className={styles.thirdOptions}>
           <h3>Our Solutions</h3>

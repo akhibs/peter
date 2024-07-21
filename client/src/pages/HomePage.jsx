@@ -73,13 +73,14 @@ export default function HomePage() {
             <FaStar />
             <FaStar />
           </p>
-          <p>Peter Page</p>
+          <p className={styles.names}>Orson Manace</p>
         </section>
         <section>
           <img src={person2} />
           <p>
-            "These guys are just the coolest logistics company ever! They
-            exceptionally handled our complex road freight services."
+            "Their performance on our project was extremely successful. As a
+            result of this collaboration, the project was built with exceptional
+            quality & delivered."
           </p>
           <p className={styles.stars}>
             <FaStar />
@@ -88,13 +89,13 @@ export default function HomePage() {
             <FaStar />
             <FaStar />
           </p>
-          <p>Peter Page</p>
+          <p className={styles.names}>Larry Goerge</p>
         </section>
         <section>
           <img src={person3} />
           <p>
-            "These guys are just the coolest logistics company ever! They
-            exceptionally handled our complex road freight services."
+            "The shipping process with this crew was a pleasurable experience!
+            They did all in time and with no safety incidents."
           </p>
           <p className={styles.stars}>
             <FaStar />
@@ -103,7 +104,7 @@ export default function HomePage() {
             <FaStar />
             <FaStar />
           </p>
-          <p>Peter Page</p>
+          <p className={styles.names}>Annie Dorse</p>
         </section>
       </div>
     </div>

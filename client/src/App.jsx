@@ -17,6 +17,7 @@ import Road from "./pages/Road";
 import Ocean from "./pages/Ocean";
 import Warehouse from "./pages/Warehouse";
 import OurSolution from "./components/OurSolution";
+import FAQ from "./pages/FAQ";
 
 const App = memo(() => {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
@@ -78,6 +79,10 @@ const App = memo(() => {
       path: "warehouse-and-storage",
       element: <Warehouse />,
     },
+    {
+      path: "frequently-asked-questions",
+      element: <FAQ />,
+    },
   ]);
 
   const onHamburgerClick = useCallback(() => {
@@ -115,7 +120,7 @@ const App = memo(() => {
           ourSolutionClick={ourSolutionClick}
           classes={ourSolution ? styles.ourSolution : styles.ourSolutionHidden}
         />
-        <a href="#">FAQ</a>
+        <a href="/frequently-asked-questions">FAQ</a>
         <a href="/contact-us">Contact</a>
         <a href="/tracking">Tracking</a>
       </div>

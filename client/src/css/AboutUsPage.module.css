@@ -103,11 +103,11 @@
 }
 
 .writeup2 img {
-  height: 40vw;
+  height: 30vw;
   width: 30vw;
 
-  min-width: 300px;
-  min-height: 300px;
+  min-width: 250px;
+  min-height: 200px;
   max-height: 300px;
   margin-inline: auto;
 }

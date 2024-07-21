@@ -39,7 +39,7 @@
   }
 
   .hamburgerDropDownMenu a {
-    border-bottom: 1px black solid;
+    border-bottom: 1px rgba(0, 0, 0, 0.151) solid;
     padding: 15px;
     margin: 0;
     width: auto;
@@ -71,7 +71,7 @@
   }
 
   .ourSolution p {
-    border-bottom: 1px black solid;
+    border-bottom: 1px rgba(0, 0, 0, 0.226) solid;
     padding: 15px;
     margin: 0;
     width: auto;
