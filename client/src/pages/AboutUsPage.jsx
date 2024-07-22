@@ -14,7 +14,7 @@ export default function AboutUsPage() {
       <section className={styles.writeup1}>
         <h2>WHO WE ARE</h2>
         <p className={styles.p1}>
-          Accurate Express Link is a world-leading provider of logistics,
+          Eliteload is a world-leading provider of logistics,
           freight forwarding, and supply chain management services
         </p>
         <p className={styles.p2}>
@@ -22,9 +22,8 @@ export default function AboutUsPage() {
           efficiency improvements that enable our customers to cut thier
           inventories, reducing operating costs, and making significant
           short-term savings for long-term competitiveness. We work to connect
-          and simplify out customers' supply chains. As the global leader in
-          shipping services, the company operates in more than 15 Countries and
-          employs roughly 15,000 people
+          and simplify our customers supply chain(s). As one of the global leaders in
+          the shipping service, we operate in more than 15 Countries worldwide and have over 15000 employees.
         </p>
       </section>
       <section className={styles.writeup2}>
