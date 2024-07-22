@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./../css/ContactUsPage.module.css";
 import { CiTimer } from "react-icons/ci";
 import { IoMdMail } from "react-icons/io";
 import { FaTelegramPlane } from "react-icons/fa";
 
 export default function ContactUsPage() {
+  const [emialData, setEmailData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setEmailData({ ...emialData, [name]: value });
+  };
+
+  const handleClick = () => {
+    console.log("gool");
+    setEmailData({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
   return (
     <div className={styles.ContactUsPage}>
       <div className={styles.theContactUsBox}>
@@ -30,16 +50,37 @@ export default function ContactUsPage() {
           </a>
         </section>
         <section className={styles.second}>
-          <input placeholder="Name" className={styles.name} type="text" />
-          <input placeholder="Email" className={styles.email} type="text" />
+          <input
+            placeholder="Name"
+            className={styles.name}
+            type="text"
+            name="name"
+            value={emialData.name}
+            onChange={handleChange}
+          />
+          <input
+            placeholder="Email"
+            className={styles.email}
+            type="text"
+            name="email"
+            value={emialData.email}
+            onChange={handleChange}
+          />
           <input
             placeholder="Message"
             className={styles.textarea}
             type="text"
+            name="message"
+            value={emialData.message}
+            onChange={handleChange}
           />
-          <button>
+          <a
+            onChange={handleChange}
+            onClick={handleClick}
+            href="mailto:someone@example.com"
+          >
             Send Message <FaTelegramPlane />
-          </button>
+          </a>
         </section>
       </div>
     </div>
