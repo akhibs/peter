@@ -7,6 +7,7 @@ import { FaPlane, FaShip, FaTruck, FaWarehouse } from "react-icons/fa";
 export default function Air() {
   return (
     <div className={styles.Air}>
+      <title>Eliteload|Air Freight Forwarding</title>
       <div className={styles.airBox}>
         <section className={styles.airCover}>
           <h3>AIR FREIGHT FORWARDING</h3>
@@ -20,20 +21,20 @@ export default function Air() {
               Airfreight can reduce the total logistics cost for urgent or
               time-critical logistical challenges. By combining the speed of air
               with the cost savings of other modes, backed by smooth and
-              efficient customs and administrative procedures, customers can
-              enjoy the best of both worlds; reducing inventory and improving
-              their own service offer with faster response times at affordable
+              efficient customs and administrative procedures. Customers can
+              enjoy the best of both Worlds, reducing inventory and improving
+              their own service offer with faster response time at affordable
               cost.
             </p>
           </aside>
           <aside>
             <h2>Global Express Shipping</h2>
             <p>
-              On selected high-volume trade lanes, Accurate Express Link
+              On selected high-volume trade lanes, Elitelod
               operates a hub and gateway network, using our own controlled
               capacity through our in-house carrier. By careful selection of
               airports, and by using our own staff, we can ensure services that
-              are frequent, cost-effective and highly reliable. We also offers
+              are frequent, cost-effective and highly reliable. We also offer
               airfreight services through our global network of offices. Most of
               our volume is routed through strategic partners with whom we have
               deep and longstanding relationships. This enables us to secure
@@ -43,7 +44,7 @@ export default function Air() {
           <aside>
             <h2>Security</h2>
             <p>
-              Security is of course our number one priority in airfreight, at
+              Security is our number one priority in airfreight, at
               our own hubs and at all the other facilities we use. All our
               hub/gateway warehouses are TAPA ‘A’ and/or C-TPAT certified. We
               make extensive use of CCTV, and where possible we build our own
