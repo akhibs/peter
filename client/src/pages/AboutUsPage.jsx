@@ -5,6 +5,7 @@ import aboutUs2 from "./../assets/about-us2.png";
 export default function AboutUsPage() {
   return (
     <div className={styles.AboutUsPage}>
+      <title>Eliteload|About Us</title>
       <div className={styles.theAboutUsBox}>
         <section className={styles.theAboutUsCover}>
           <h3>ABOUT US</h3>
@@ -29,16 +30,14 @@ export default function AboutUsPage() {
       <section className={styles.writeup2}>
         <h2>OUR MISSION & VISION</h2>
         <p className={styles.p1}>
-          To meet our customers' demands for a personal & proffessional service
-          by offering innovative supply chain Solutions.
+          To meet our customers demand(s) for a personal & proffessional service
+          by offering innovative supply chain solutions.
         </p>
         <p className={styles.p2}>
-          We proactively and constantly look for new possibilities. therefore,
+          We are proactively and constantly looking for new possibilities, therefore,
           an important part of our vision is to attract & retain. Procedures,
           values and attitudes are crucial to our reputation - not to mention
-          the success we enjoy. We use latest trends and innovations in our
-          supply chain
-        </p>
+          the success we enjoy. We use modern means and innovations to facilitate our supply chain</p>
         <img src={aboutUs2} />
       </section>
     </div>
