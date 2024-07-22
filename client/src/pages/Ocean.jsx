@@ -7,6 +7,7 @@ import { FaPlane, FaShip, FaTruck, FaWarehouse } from "react-icons/fa";
 export default function Ocean() {
   return (
     <div className={styles.Ocean}>
+      <title>Eliteload|Ocean Freight Forwarding</title>
       <div className={styles.oceanBox}>
         <section className={styles.oceanCover}>
           <h3>OCEAN FREIGHT FORWARDING</h3>
@@ -17,22 +18,21 @@ export default function Ocean() {
           <aside>
             <h2>OCEAN Freight Introduction</h2>
             <p>
-              Accurate Express Link is uniquely positioned for offering a
-              complete and competitive FCL and LCL product. Accurate Express
-              Link’ LCL services range from the coordination of single LCL
+              Eliteload is uniquely positioned for offering a
+              complete and competitive FCL and LCL product. Accurate Eliteload LCL services range from the coordination of single LCL
               shipments all the way to multi-country consolidation. All LCL
               cargo is consolidated into FCL loads at one of our hubs and then
               shipped to destination, thus realising significant savings in
               transportation, administration, and handling costs and reducing
               transit times. Transportation can even be made easier by adding
-              valueadded services such as to-door trucking and customs
+              value-added services such as door-to-door trucking and customs
               brokerage.
             </p>
           </aside>
           <aside>
             <h2>Global Express Shipping</h2>
             <p>
-              On selected high-volume trade lanes, Accurate Express Link
+              On selected high-volume trade lanes, Eliteload
               operates a hub and gateway network, using our own controlled
               capacity through our in-house carrier. By careful selection of
               airports, and by using our own staff, we can ensure services that
