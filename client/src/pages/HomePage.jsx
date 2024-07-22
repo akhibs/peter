@@ -23,9 +23,9 @@ export default function HomePage() {
             <h3>Let The Experts Handle Your Logistics</h3>
             <div className={styles.horizontalLine}></div>
             <p>
-              The most valuable resource we have is our employees. Their
-              relentless pursuit of perfection is what has enabled Top Globe
-              Logistics to deliver the premium level of service which it is
+              Our most valuable resources are our professional employees. Their
+              relentless pursuit for perfection is the bedrock foundation that has enabled us
+               to deliver the premium level services which are
               known for.
             </p>
             <button>Get A Quote</button>
