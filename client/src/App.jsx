@@ -44,15 +44,15 @@ const App = memo(() => {
       element: <TrackingDetailsPage />,
     },
     {
-      path: "admin",
+      path: "apsod2if4ugyh2tjr4005kelwq",
       element: <AdminDashboardPage />,
     },
     {
-      path: "admin/add-new-package",
+      path: "apsod2if4ugyh2tjr4005kelwq/add-new-package",
       element: <AddNewPackage />,
     },
     {
-      path: "admin/edit-package",
+      path: "apsod2if4ugyh2tjr4005kelwq/edit-package",
       element: <EditPackage />,
     },
     {
@@ -98,7 +98,7 @@ const App = memo(() => {
       <p className={styles.emailTo}>
         <a href="mailto:someone@example.com">
           <IoMdMail />
-          support@someone@example.com
+          seliteload@gmail.com
         </a>
       </p>
       <Header

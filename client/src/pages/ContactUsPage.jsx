@@ -42,7 +42,7 @@ export default function ContactUsPage() {
           </p>
           <a href="mailto:someone@example.com">
             <IoMdMail className={styles.icon} />
-            support@someone@example.com
+            seliteload@gmail.com
             <p>
               <CiTimer className={styles.icon} />
               Sat - Thu: 8AM -7PM
@@ -77,7 +77,7 @@ export default function ContactUsPage() {
           <a
             onChange={handleChange}
             onClick={handleClick}
-            href="mailto:someone@example.com"
+            href="mailto:seliteload@gmail.com"
           >
             Send Message <FaTelegramPlane />
           </a>

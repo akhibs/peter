@@ -10,9 +10,9 @@ export default function Footer() {
         <section className={styles.firstOptions}>
           <img src={logo} className={styles.footerLogo} />
           <p>
-            Eliteload is a global supplier of transport and
-            logistics solutions. We have offices in more than 15 countries and
-            an international network of partners and agents.
+            Eliteload is a global supplier of transport and logistics solutions.
+            We have offices in more than 15 countries and an international
+            network of partners and agents.
           </p>
         </section>
         <section className={styles.secondOptions}>
@@ -34,9 +34,9 @@ export default function Footer() {
         </section>
         <section className={styles.fourthOptions}>
           <h3>Contact us</h3>
-          <a href="mailto:someone@example.com">
+          <a href="mailto:seliteload@gmail.com">
             <IoMdMail />
-            support@someone@example.com
+            seliteload@gmail.com
           </a>
         </section>
       </div>
