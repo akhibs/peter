@@ -7,6 +7,7 @@ import { FaPlane, FaShip, FaTruck, FaWarehouse } from "react-icons/fa";
 export default function Warehouse() {
   return (
     <div className={styles.Warehouse}>
+      <title>Eliteload|Warehouse</title>
       <div className={styles.warehouseBox}>
         <section className={styles.warehouseCover}>
           <h3>WAREHOUSE FREIGHT FORWARDING</h3>
@@ -30,7 +31,7 @@ export default function Warehouse() {
           <aside>
             <h2>Knowledge and Facilities</h2>
             <p>
-              Accurate Express Link’ scale enables us to take innovative and
+              Eliteload scale enables us to take innovative and
               decisive action to develop and implement the most suitable service
               portfolio for your organization. For this purpose, we have an IT &
               logistical engineering department. Our warehouse processes focus
