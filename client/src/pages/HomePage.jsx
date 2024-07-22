@@ -13,7 +13,7 @@ export default function HomePage() {
     <div className={styles.HomePage}>
       <div className={styles.coverBox}>
         <div className={styles.cover}>
-          <p>Fast . Secured . WorldWide</p>
+          <p>Fast | Secured | WorldWide</p>
           <h1>EXPRESS SEEMLESS LOGISTIC SERVICES</h1>
         </div>
       </div>
