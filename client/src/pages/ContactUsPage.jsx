@@ -30,7 +30,7 @@ export default function ContactUsPage() {
           </a>
         </section>
         <section className={styles.second}>
-          <input placeholder="Nane" className={styles.name} type="text" />
+          <input placeholder="Name" className={styles.name} type="text" />
           <input placeholder="Email" className={styles.email} type="text" />
           <input
             placeholder="Message"
