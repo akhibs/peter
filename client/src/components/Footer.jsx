@@ -10,7 +10,7 @@ export default function Footer() {
         <section className={styles.firstOptions}>
           <img src={logo} className={styles.footerLogo} />
           <p>
-            Accurate Express Link is a global supplier of transport and
+            Eliteload is a global supplier of transport and
             logistics solutions. We have offices in more than 15 countries and
             an international network of partners and agents.
           </p>
