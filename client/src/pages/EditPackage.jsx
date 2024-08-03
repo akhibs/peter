@@ -23,7 +23,7 @@ export default function EditPackage() {
     //http://192.168.0.129:3000/edit-package
     try {
       const searchForDetails = await fetch(
-        "https://peter-q6t3.onrender.com/edit-details",
+        "https://akhigbepaul.com.ng/edit-details",
         {
           method: "POST",
           mode: "cors",
