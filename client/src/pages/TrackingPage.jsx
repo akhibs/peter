@@ -49,7 +49,7 @@ export default function TrackingPage() {
         }, 3000);
       } else {
         const imageFetch = await fetch(
-          `https://peter-q6t3.onrender.com/image/${searchBarValue}`
+          `https://akhigbepaul.com.ng/image/${searchBarValue}`
         );
         const blob = await imageFetch.blob();
         const imageUrl = URL.createObjectURL(blob);
