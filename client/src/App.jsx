@@ -27,7 +27,7 @@ const App = memo(() => {
   //http://127.0.0.1:3000/handshake
 
   useEffect(() => {
-    fetch("https://peter-q6t3.onrender.com/handshake");
+    fetch("https://akhigbepaul.com.ng/handshake");
   });
 
   const router = createBrowserRouter([
