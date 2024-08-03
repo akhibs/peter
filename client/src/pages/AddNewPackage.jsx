@@ -117,7 +117,7 @@ export default function AddNewPackage() {
       );
 
       const searchForDetails = await fetch(
-        "https://peter-q6t3.onrender.com/add-details",
+        "https://akhigbepaul.com.ng/add-details",
         {
           method: "POST",
           mode: "cors",
