@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function AdminDashboardPage() {
   useEffect(() => {
-    fetch("https://peter-q6t3.onrender.com/handshake");
+    fetch("https://akhigbepaul.com.ng/handshake");
   });
 
   const navigate = useNavigate();
