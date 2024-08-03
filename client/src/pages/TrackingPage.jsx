@@ -8,7 +8,7 @@ export default function TrackingPage() {
   const [errorStatus, setErrorStatus] = useState("");
 
   useEffect(() => {
-    fetch("https://peter-q6t3.onrender.com/handshake");
+    fetch("https://akhigbepaul.com.ng/handshake");
   });
 
   const navigate = useNavigate();
