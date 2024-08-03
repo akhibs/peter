@@ -22,7 +22,7 @@ export default function TrackingPage() {
     //http://127.0.0.1:3000/id-search
     try {
       const searchForDetails = await fetch(
-        "https://peter-q6t3.onrender.com/id-search",
+        "https://akhigbepaul.com.ng/id-search",
         {
           method: "POST",
           mode: "cors",
