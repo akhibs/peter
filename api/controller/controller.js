@@ -149,7 +149,7 @@ exports.editDetails = (req, res) => {
   });
 };
 
-exports.idSearch = async (req, res) => {
+exports.idSearch = (req, res) => {
   const foundData = data.filter(
     (e) => e.trackingNo === req.body.searchBarValue
   );
@@ -161,7 +161,7 @@ exports.idSearch = async (req, res) => {
   });
 };
 
-exports.getImage = async (req, res) => {
+exports.getImage = (req, res) => {
   const fileName = data.filter((e) => e.trackingNo === req.params.id);
 
   const filePath = path.join(__dirname, "..", "uploads", fileName[0].image);
@@ -170,7 +170,7 @@ exports.getImage = async (req, res) => {
   res.sendFile(filePath);
 };
 
-exports.test = async (req, res) => {
+exports.test = (req, res) => {
   console.log(data[0].trackingNo);
   console.log("active");
 
