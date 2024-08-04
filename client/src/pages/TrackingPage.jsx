@@ -21,21 +21,24 @@ export default function TrackingPage() {
     //http://127.0.0.1:443/id-search
     setIsSubmit(true);
     try {
-      const searchForDetails = await fetch("http://127.0.0.1:80/id-search", {
-        method: "POST",
-        mode: "cors",
-        cache: "default",
-        credentials: "same-origin",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-          Accept: "application/json",
-        },
-        redirect: "follow",
-        referrerPolicy: "no-referrer",
-        body: JSON.stringify({
-          searchBarValue,
-        }),
-      });
+      const searchForDetails = await fetch(
+        "https://akhigbepaul.com.ng/id-search",
+        {
+          method: "POST",
+          mode: "cors",
+          cache: "default",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "application/json;charset=utf-8",
+            Accept: "application/json",
+          },
+          redirect: "follow",
+          referrerPolicy: "no-referrer",
+          body: JSON.stringify({
+            searchBarValue,
+          }),
+        }
+      );
 
       const response = await searchForDetails.json();
 
@@ -47,7 +50,7 @@ export default function TrackingPage() {
         }, 3000);
       } else {
         const imageFetch = await fetch(
-          `http://127.0.0.1:80/image/${searchBarValue}`
+          `https://akhigbepaul.com.ng/image/${searchBarValue}`
         );
         const blob = await imageFetch.blob();
         const imageUrl = URL.createObjectURL(blob);

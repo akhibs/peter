@@ -119,15 +119,18 @@ export default function AddNewPackage() {
         })
       );
 
-      const searchForDetails = await fetch("http://127.0.0.1:80/add-details", {
-        method: "POST",
-        mode: "cors",
-        cache: "default",
-        credentials: "same-origin",
-        redirect: "follow",
-        referrerPolicy: "no-referrer",
-        body: formData,
-      });
+      const searchForDetails = await fetch(
+        "https://akhigbepaul.com.ng/add-details",
+        {
+          method: "POST",
+          mode: "cors",
+          cache: "default",
+          credentials: "same-origin",
+          redirect: "follow",
+          referrerPolicy: "no-referrer",
+          body: formData,
+        }
+      );
 
       const response = await searchForDetails.json();
 
