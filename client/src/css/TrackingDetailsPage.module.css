@@ -162,14 +162,19 @@
   color: #072a40;
 }
 
+.packages table tbody {
+  border-collapse: collapse;
+  width: 80%;
+}
+
 .packages table {
   border-collapse: collapse;
   width: 80%;
 }
 
-.packages table tr,
-.packages table th,
-.packages table td {
+.packages table tbody tr,
+.packages table tbody th,
+.packages table tbody td {
   color: #072a40d5;
   border: #18b6be63 1px solid;
   padding: 1%;

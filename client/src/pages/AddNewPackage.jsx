@@ -82,6 +82,7 @@ export default function AddNewPackage() {
 
   async function submitDetails() {
     //https://peter-q6t3.onrender.com/add-details
+    //https://akhigbepaul.com.ng/add-details
     //http://127.0.0.1:3000/add-details
     //http://192.168.0.129:3000/add-details
 
@@ -117,7 +118,7 @@ export default function AddNewPackage() {
       );
 
       const searchForDetails = await fetch(
-        "https://peter-q6t3.onrender.com/add-details",
+        "https://akhigbepaul.com.ng/add-details",
         {
           method: "POST",
           mode: "cors",

@@ -93,16 +93,18 @@ export default function TrackingDetailsPage() {
       <section className={styles.packages}>
         <h3>Packages</h3>
         <table border="1">
-          <tr>
-            <th>Quantity</th>
-            <th>Content</th>
-            <th>Weight</th>
-          </tr>
-          <tr>
-            <td>{a[0].packages.quantity}</td>
-            <td>{a[0].packages.content}</td>
-            <td>{a[0].packages.weight}</td>
-          </tr>
+          <tbody border="1">
+            <tr>
+              <th>Quantity</th>
+              <th>Content</th>
+              <th>Weight</th>
+            </tr>
+            <tr>
+              <td>{a[0].packages.quantity}</td>
+              <td>{a[0].packages.content}</td>
+              <td>{a[0].packages.weight}</td>
+            </tr>
+          </tbody>
         </table>
       </section>
       <section className={styles.shipmentStatus}>

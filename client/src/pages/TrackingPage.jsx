@@ -7,10 +7,6 @@ export default function TrackingPage() {
   const [searchBarValue, setSearchBarValue] = useState("");
   const [errorStatus, setErrorStatus] = useState("");
 
-  useEffect(() => {
-    fetch("https://peter-q6t3.onrender.com/handshake");
-  });
-
   const navigate = useNavigate();
 
   function searchBarInput(e) {
@@ -19,10 +15,11 @@ export default function TrackingPage() {
 
   async function searchForGoods() {
     //https://peter-q6t3.onrender.com/id-search
-    //http://127.0.0.1:3000/id-search
+    //https://akhigbepaul.com.ng/id-search
+    //http://127.0.0.1:443/id-search
     try {
       const searchForDetails = await fetch(
-        "https://peter-q6t3.onrender.com/id-search",
+        "https://akhigbepaul.com.ng/id-search",
         {
           method: "POST",
           mode: "cors",
@@ -42,14 +39,14 @@ export default function TrackingPage() {
 
       const response = await searchForDetails.json();
 
-      if (response.foundData[0] === null) {
+      if (response.foundData.length === 0) {
         setErrorStatus(" Invalid Tracking Details. Does not exist");
         setTimeout(() => {
           setErrorStatus("");
         }, 3000);
       } else {
         const imageFetch = await fetch(
-          `https://peter-q6t3.onrender.com/image/${searchBarValue}`
+          `https://akhigbepaul.com.ng/image/${searchBarValue}`
         );
         const blob = await imageFetch.blob();
         const imageUrl = URL.createObjectURL(blob);
@@ -67,7 +64,7 @@ export default function TrackingPage() {
   }
 
   return (
-    <div className={TrackingPage}>
+    <div className={styles.TrackingPage}>
       <div className={styles.theTrackingBox}>
         <section className={styles.theTrackingCover}>
           <h3>Track Your Goods</h3>

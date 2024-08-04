@@ -19,11 +19,11 @@ export default function EditPackage() {
 
   async function submitDetails() {
     //https://peter-q6t3.onrender.com/edit-package
-    //http://127.0.0.1:3000/edit-package
-    //http://192.168.0.129:3000/edit-package
+    //http://127.0.0.1:80/edit-package
+    //http://192.168.0.129:80/edit-package
     try {
       const searchForDetails = await fetch(
-        "https://peter-q6t3.onrender.com/edit-details",
+        "https://akhigbepaul.com.ng/edit-details",
         {
           method: "POST",
           mode: "cors",

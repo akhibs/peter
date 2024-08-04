@@ -13,15 +13,13 @@ exports.addDetails = (req, res) => {
   let imageName = "";
 
   //==========================================
+
   const storage = multer.diskStorage({
     destination: "./uploads/",
     filename: (req, file, cb) => {
-      cb(
-        null,
-        file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-      );
       imageName =
         file.fieldname + "-" + Date.now() + path.extname(file.originalname);
+      cb(null, imageName);
     },
   });
 
@@ -102,7 +100,9 @@ exports.addDetails = (req, res) => {
 
         const stringedData = JSON.stringify(newData, null, 2);
 
-        fs.writeFile("data.json", stringedData, (err) => {
+        const filePath1 = path.join(__dirname, "..", "data.json");
+
+        fs.writeFile(filePath1, stringedData, (err) => {
           if (err) {
             console.log("error writinf dile");
           } else {
@@ -134,7 +134,9 @@ exports.editDetails = (req, res) => {
 
   const stringedData = JSON.stringify(updatedData, null, 2);
 
-  fs.writeFile("data.json", stringedData, (err) => {
+  const filePath2 = path.join(__dirname, "..", "data.json");
+
+  fs.writeFile(filePath2, stringedData, (err) => {
     if (err) {
       console.log("error writinf dile");
     } else {
@@ -147,36 +149,32 @@ exports.editDetails = (req, res) => {
   });
 };
 
-exports.idSearch = (req, res) => {
-  const foundData = data.map((e) => {
-    if (e.trackingNo === req.body.searchBarValue) {
-      return e;
-    }
-  });
+exports.idSearch = async (req, res) => {
+  const foundData = data.filter(
+    (e) => e.trackingNo === req.body.searchBarValue
+  );
 
+  console.log(foundData);
   res.status(200).json({
     status: "good",
     foundData,
   });
 };
 
-exports.getImage = (req, res) => {
-  const fileName = data.map((e) => {
-    if (e.trackingNo === req.params.id) {
-      return e.image;
-    }
-  });
+exports.getImage = async (req, res) => {
+  const fileName = data.filter((e) => e.trackingNo === req.params.id);
 
-  console.log(fileName[0]);
-  const filePath = path.join(__dirname, "..", "uploads", fileName[0]);
+  const filePath = path.join(__dirname, "..", "uploads", fileName[0].image);
 
   console.log(filePath);
   res.sendFile(filePath);
 };
 
-exports.test = (req, res) => {
+exports.test = async (req, res) => {
   console.log(data[0].trackingNo);
   console.log("active");
 
-  res.status(200);
+  res.status(200).send("good").json({
+    status: "good",
+  });
 };
