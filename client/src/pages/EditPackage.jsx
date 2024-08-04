@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import styles from "./../css/EditPackage.module.css";
+import { SpinnerCircular } from "spinners-react";
 
 export default function EditPackage() {
   const [errorMsg, setErrorMsg] = useState("");
   const [trackingNo, setTrackingNo] = useState("");
   const [shipmentStatus, setShipmentStatus] = useState("");
   const [currentLocation, setCurrentLocaion] = useState("");
+  const [isSubmit, setIsSubmit] = useState(false);
 
   function changeInput(e) {
     if (e.target.name === "trackingNo") {
@@ -21,27 +23,25 @@ export default function EditPackage() {
     //https://peter-q6t3.onrender.com/edit-package
     //http://127.0.0.1:80/edit-package
     //http://192.168.0.129:80/edit-package
+    setIsSubmit(true);
     try {
-      const searchForDetails = await fetch(
-        "https://akhigbepaul.com.ng/edit-details",
-        {
-          method: "POST",
-          mode: "cors",
-          cache: "default",
-          credentials: "same-origin",
-          headers: {
-            "Content-Type": "application/json;charset=utf-8",
-            Accept: "application/json",
-          },
-          redirect: "follow",
-          referrerPolicy: "no-referrer",
-          body: JSON.stringify({
-            trackingNo,
-            shipmentStatus,
-            currentLocation,
-          }),
-        }
-      );
+      const searchForDetails = await fetch("http://127.0.0.1:80/edit-details", {
+        method: "POST",
+        mode: "cors",
+        cache: "default",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+          Accept: "application/json",
+        },
+        redirect: "follow",
+        referrerPolicy: "no-referrer",
+        body: JSON.stringify({
+          trackingNo,
+          shipmentStatus,
+          currentLocation,
+        }),
+      });
 
       const response = await searchForDetails.json();
 
@@ -49,6 +49,7 @@ export default function EditPackage() {
         setErrorMsg("Updatted Successfully");
         setTimeout(() => {
           setErrorMsg("");
+          setIsSubmit(false);
         }, 3000);
 
         //=======================
@@ -60,12 +61,14 @@ export default function EditPackage() {
         setErrorMsg("Tracking number does not exist");
         setTimeout(() => {
           setErrorMsg("");
+          setIsSubmit(false);
         }, 3000);
       }
     } catch (e) {
       setErrorMsg("An Error Occured Please try again");
       setTimeout(() => {
         setErrorMsg("");
+        setIsSubmit(false);
       }, 3000);
     }
   }
@@ -93,8 +96,16 @@ export default function EditPackage() {
         type="text"
         value={currentLocation}
       />
-
-      <button onClick={submitDetails}>Update PAckage</button>
+      {isSubmit ? (
+        <SpinnerCircular
+          size={30}
+          thickness={200}
+          secondaryColor="#ffffff"
+          color="c41e3a"
+        />
+      ) : (
+        <button onClick={submitDetails}>Update PAckage</button>
+      )}
       <p>{errorMsg}</p>
     </div>
   );

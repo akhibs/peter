@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./../css/AddNewPackage.module.css";
+import { SpinnerCircular } from "spinners-react";
 
 export default function AddNewPackage() {
   const [errorMsg, setErrorMsg] = useState("");
@@ -26,6 +27,7 @@ export default function AddNewPackage() {
   const [currentLocation, setCurrentLocaion] = useState("");
   const [arrivalDate, setArrivalDate] = useState("");
   const [userImage, setUserImage] = useState(null);
+  const [isSubmit, setIsSubmit] = useState(false);
 
   function changeInput(e) {
     e.preventDefault();
@@ -83,9 +85,9 @@ export default function AddNewPackage() {
   async function submitDetails() {
     //https://peter-q6t3.onrender.com/add-details
     //https://akhigbepaul.com.ng/add-details
-    //http://127.0.0.1:3000/add-details
+    //http://127.0.0.1:80/add-details
     //http://192.168.0.129:3000/add-details
-
+    setIsSubmit(true);
     try {
       const formData = new FormData();
       formData.append("image", userImage);
@@ -117,18 +119,15 @@ export default function AddNewPackage() {
         })
       );
 
-      const searchForDetails = await fetch(
-        "https://akhigbepaul.com.ng/add-details",
-        {
-          method: "POST",
-          mode: "cors",
-          cache: "default",
-          credentials: "same-origin",
-          redirect: "follow",
-          referrerPolicy: "no-referrer",
-          body: formData,
-        }
-      );
+      const searchForDetails = await fetch("http://127.0.0.1:80/add-details", {
+        method: "POST",
+        mode: "cors",
+        cache: "default",
+        credentials: "same-origin",
+        redirect: "follow",
+        referrerPolicy: "no-referrer",
+        body: formData,
+      });
 
       const response = await searchForDetails.json();
 
@@ -136,6 +135,7 @@ export default function AddNewPackage() {
         setErrorMsg("Added Successfully");
         setTimeout(() => {
           setErrorMsg("");
+          setIsSubmit(false);
         }, 3000);
 
         //=======================
@@ -161,12 +161,14 @@ export default function AddNewPackage() {
         setShipmentStatus("");
         setCurrentLocaion("");
         setArrivalDate("");
+        setIsSubmit(false);
         //===================
       }
     } catch (e) {
       setErrorMsg("An Error Occured Please try again");
       setTimeout(() => {
         setErrorMsg("");
+        setIsSubmit(false);
       }, 3000);
     }
   }
@@ -299,7 +301,16 @@ export default function AddNewPackage() {
       />
       <p>User Image</p>
       <input onChange={changeInput} name="userImage" type="file" />
-      <button onClick={submitDetails}>Add User</button>
+      {isSubmit ? (
+        <SpinnerCircular
+          secondaryColor="#ffffff"
+          size={50}
+          thickness={200}
+          color="c41e3a"
+        />
+      ) : (
+        <button onClick={submitDetails}>Add User</button>
+      )}
       <p>{errorMsg}</p>
     </div>
   );

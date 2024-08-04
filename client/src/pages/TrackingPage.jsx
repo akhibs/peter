@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./../css/TrackingPage.module.css";
 import { TbWorldSearch } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
+import { SpinnerCircular } from "spinners-react";
 
 export default function TrackingPage() {
   const [searchBarValue, setSearchBarValue] = useState("");
   const [errorStatus, setErrorStatus] = useState("");
+  const [isSubmit, setIsSubmit] = useState(false);
 
   const navigate = useNavigate();
 
@@ -17,25 +19,23 @@ export default function TrackingPage() {
     //https://peter-q6t3.onrender.com/id-search
     //https://akhigbepaul.com.ng/id-search
     //http://127.0.0.1:443/id-search
+    setIsSubmit(true);
     try {
-      const searchForDetails = await fetch(
-        "https://akhigbepaul.com.ng/id-search",
-        {
-          method: "POST",
-          mode: "cors",
-          cache: "default",
-          credentials: "same-origin",
-          headers: {
-            "Content-Type": "application/json;charset=utf-8",
-            Accept: "application/json",
-          },
-          redirect: "follow",
-          referrerPolicy: "no-referrer",
-          body: JSON.stringify({
-            searchBarValue,
-          }),
-        }
-      );
+      const searchForDetails = await fetch("http://127.0.0.1:80/id-search", {
+        method: "POST",
+        mode: "cors",
+        cache: "default",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+          Accept: "application/json",
+        },
+        redirect: "follow",
+        referrerPolicy: "no-referrer",
+        body: JSON.stringify({
+          searchBarValue,
+        }),
+      });
 
       const response = await searchForDetails.json();
 
@@ -43,10 +43,11 @@ export default function TrackingPage() {
         setErrorStatus(" Invalid Tracking Details. Does not exist");
         setTimeout(() => {
           setErrorStatus("");
+          setIsSubmit(false);
         }, 3000);
       } else {
         const imageFetch = await fetch(
-          `https://akhigbepaul.com.ng/image/${searchBarValue}`
+          `http://127.0.0.1:80/image/${searchBarValue}`
         );
         const blob = await imageFetch.blob();
         const imageUrl = URL.createObjectURL(blob);
@@ -59,6 +60,7 @@ export default function TrackingPage() {
       setErrorStatus(" error in connection. try agin in 10sec");
       setTimeout(() => {
         setErrorStatus("");
+        setIsSubmit(false);
       }, 3000);
     }
   }
@@ -81,7 +83,19 @@ export default function TrackingPage() {
           onChange={searchBarInput}
         />
 
-        <TbWorldSearch className={styles.searchIcon} onClick={searchForGoods} />
+        {isSubmit ? (
+          <SpinnerCircular
+            size={30}
+            thickness={200}
+            secondaryColor="#ffffff"
+            color="c41e3a"
+          />
+        ) : (
+          <TbWorldSearch
+            className={styles.searchIcon}
+            onClick={searchForGoods}
+          />
+        )}
       </div>
       <p className={styles.errorMsg}>{errorStatus}</p>
     </div>
