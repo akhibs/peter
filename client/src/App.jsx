@@ -24,10 +24,7 @@ const App = memo(() => {
   const [ourSolution, setOurSolution] = useState(true);
 
   //https://peter-q6t3.onrender.com/handshake
-  //http://127.0.0.1:80/handshake
-  //https://akhigbepaul.com.ng/handshake
-
-
+  //http://127.0.0.1:3000/handshake
 
   const router = createBrowserRouter([
     {
