@@ -94,7 +94,7 @@ const App = memo(() => {
       <p className={styles.emailTo}>
         <a href="mailto:someone@example.com">
           <IoMdMail />
-          seliteload@gmail.com
+          eliteload@gmail.com
         </a>
       </p>
       <Header

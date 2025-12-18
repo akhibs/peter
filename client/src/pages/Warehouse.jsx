@@ -31,14 +31,13 @@ export default function Warehouse() {
           <aside>
             <h2>Knowledge and Facilities</h2>
             <p>
-              Eliteload scale enables us to take innovative and
-              decisive action to develop and implement the most suitable service
-              portfolio for your organization. For this purpose, we have an IT &
-              logistical engineering department. Our warehouse processes focus
-              on goods intakes, AEO-certified customs services, quality
-              controls, stock management, e-commerce order fulfilment and
-              customer-specific product management. Data exchange is preferably
-              digital.
+              Eliteload scale enables us to take innovative and decisive action
+              to develop and implement the most suitable service portfolio for
+              your organization. For this purpose, we have an IT & logistical
+              engineering department. Our warehouse processes focus on goods
+              intakes, AEO-certified customs services, quality controls, stock
+              management, e-commerce order fulfilment and customer-specific
+              product management. Data exchange is preferably digital.
             </p>
           </aside>
           <aside>
@@ -81,7 +80,7 @@ export default function Warehouse() {
           </aside>
           <aside>
             <h2>Contact Us</h2>
-            <a href="mailto:someone@example.com">
+            <a href="mailto:eliteload@gmail.com">
               <IoMdMail className={styles.icon} />
               support@someone@example.com
               <p>

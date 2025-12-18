@@ -171,10 +171,7 @@ exports.getImage = (req, res) => {
 };
 
 exports.test = (req, res) => {
-  console.log(data[0].trackingNo);
   console.log("active");
 
-  res.status(200).send("good").json({
-    status: "good",
-  });
+  res.status(200).send("good");
 };

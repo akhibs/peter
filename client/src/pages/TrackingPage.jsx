@@ -22,7 +22,7 @@ export default function TrackingPage() {
     setIsSubmit(true);
     try {
       const searchForDetails = await fetch(
-        "https://akhigbepaul.com.ng/id-search",
+        "https://eliteload.com.ng/id-search",
         {
           method: "POST",
           mode: "cors",
@@ -50,7 +50,7 @@ export default function TrackingPage() {
         }, 3000);
       } else {
         const imageFetch = await fetch(
-          `https://akhigbepaul.com.ng/image/${searchBarValue}`
+          `https://eliteload.com.ng/image/${searchBarValue}`
         );
         const blob = await imageFetch.blob();
         const imageUrl = URL.createObjectURL(blob);
