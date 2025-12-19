@@ -60,7 +60,7 @@ export default function TrackingPage() {
         });
       }
     } catch (e) {
-      setErrorStatus(e.message);
+      setErrorStatus("error in connection. please try again in 10 secs");
       setTimeout(() => {
         setErrorStatus("");
         setIsSubmit(false);
