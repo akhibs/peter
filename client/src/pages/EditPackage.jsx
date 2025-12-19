@@ -26,7 +26,7 @@ export default function EditPackage() {
     setIsSubmit(true);
     try {
       const searchForDetails = await fetch(
-        "https://eliteload.com.ng/edit-details",
+        "http://eliteload.com.ng/edit-details",
         {
           method: "POST",
           mode: "cors",
