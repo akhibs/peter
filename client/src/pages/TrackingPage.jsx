@@ -22,7 +22,7 @@ export default function TrackingPage() {
     setIsSubmit(true);
     try {
       const searchForDetails = await fetch(
-        "https://eliteload.com.ng/id-search",
+        "http://eliteload.com.ng/id-search",
         {
           method: "POST",
           mode: "cors",
