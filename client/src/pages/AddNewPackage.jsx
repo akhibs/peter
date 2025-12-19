@@ -120,7 +120,7 @@ export default function AddNewPackage() {
       );
 
       const searchForDetails = await fetch(
-        "https://akhigbepaul.com.ng/add-details",
+        "http://eliteload.com.ng/add-details",
         {
           method: "POST",
           mode: "cors",
