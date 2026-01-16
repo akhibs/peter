@@ -113,9 +113,7 @@ exports.addDetails = (req, res) => {
         console.log("package added");
         */
 
-        res.status(200).json({
-          status: "good",
-        }).send("good);
+        res.status(200).send("good);
       }
     }
   });
