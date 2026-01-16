@@ -182,5 +182,6 @@ exports.getImage = (req, res) => {
 
 exports.test = (req, res) => {
     console.log("active");
+    res.status(200).send("guilder")
 
 };
