@@ -123,6 +123,9 @@ export default function AddNewPackage() {
         "https://eliteload.com.ng/add-details",
         {
           method: "POST",
+          headers:{
+            "Content-Type":"application/json"
+          },
           mode: "cors",
           cache: "default",
           credentials: "same-origin",
