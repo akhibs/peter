@@ -196,55 +196,55 @@ export default function AddNewPackage() {
         type="text"
         value={company}
       />
-      <p>company Description</p>
+      <p>Company Description</p>
       <input
         onChange={changeInput}
         name="companyDescription"
         type="text"
         value={companyDescription}
       />
-      <p>company Address</p>
+      <p>Company Address</p>
       <input
         onChange={changeInput}
         name="companyAddress"
         type="text"
         value={companyAddress}
       />
-      <p>company Email</p>
+      <p>Company Email</p>
       <input
         onChange={changeInput}
         name="companyEmail"
         type="text"
         value={companyEmail}
       />
-      <p>name of Reciever</p>
+      <p>Name of Receiver</p>
       <input onChange={changeInput} name="name" type="text" value={name} />
-      <p>address of reciever</p>
+      <p>Address of Receiver</p>
       <input
         onChange={changeInput}
         name="address"
         type="text"
         value={address}
       />
-      <p>email of reciever</p>
+      <p>Email of Receiver</p>
       <input onChange={changeInput} name="email" type="text" value={email} />
       <p>Origin of shipment</p>
       <input onChange={changeInput} name="origin" type="text" value={origin} />
-      <p>destinantion</p>
+      <p>Destinantion</p>
       <input
         onChange={changeInput}
         name="destination"
         type="text"
         value={destination}
       />
-      <p>shipment Mode </p>
+      <p>Shipment Mode </p>
       <input
         onChange={changeInput}
         name="shipmentMode"
         type="text"
         value={shipmentMode}
       />
-      <p>depature Date</p>
+      <p>Depature Date</p>
       <input
         onChange={changeInput}
         name="depatureDate"
@@ -258,7 +258,7 @@ export default function AddNewPackage() {
         type="text"
         value={deliveryDate}
       />
-      <p>comment</p>
+      <p>Comment</p>
       <input
         onChange={changeInput}
         name="comment"
@@ -272,23 +272,23 @@ export default function AddNewPackage() {
         type="text"
         value={quantity}
       />
-      <p>content</p>
+      <p>Content</p>
       <input
         onChange={changeInput}
         name="content"
         type="text"
         value={content}
       />
-      <p>weight</p>
+      <p>Weight</p>
       <input onChange={changeInput} name="weight" type="text" value={weight} />
-      <p>shipment Status</p>
+      <p>Shipment Status</p>
       <input
         onChange={changeInput}
         name="shipmentStatus"
         type="text"
         value={shipmentStatus}
       />
-      <p>current Location</p>
+      <p>Current Location</p>
       <input
         onChange={changeInput}
         name="currentLocation"
