@@ -166,11 +166,15 @@ export default function AddNewPackage() {
         setArrivalDate("");
         setIsSubmit(false);
         //===================
-      }else{
-        setErrorMsg("was not added")
+      }else if(response.status==="no_image"){
+        setErrorMsg("no image added")
+      }else if(response.status==="bad_image"){
+        setErrorMsg("no image added")
+      }else if(response.status==="upload_failed"){
+        setErrorMsg("did not upload")
       }
     } catch (e) {
-      setErrorMsg(e.name);
+      setErrorMsg(e.name, e.message);
       setTimeout(() => {
         setErrorMsg("");
         setIsSubmit(false);
