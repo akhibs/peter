@@ -113,13 +113,15 @@ exports.addDetails = (req, res) => {
         console.log("package added");
         */
 
-        res.status(200).send("good);
+        
       }
     }
   });
-  //=================================================
+  
+res.status(200).send("good");
 };
 
+//=================================================
 exports.editDetails = (req, res) => {
   let status = "notFound";
 
