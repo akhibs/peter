@@ -12,6 +12,10 @@ exports.addDetails = (req, res) => {
   
   let reqBody = {};
   let imageName = "";
+  if (imageName === ""){
+    res.status(200).json({
+      status:"no_image"
+    })
 
   //==========================================
 
@@ -51,6 +55,9 @@ exports.addDetails = (req, res) => {
 
     console.log(imageName);
     if (err) {
+      res.status(200).json({
+        status:"bad_image"
+      })
       console.log("error in upload ooo");
     } else {
       if (req.file === undefined) {
@@ -118,7 +125,8 @@ exports.addDetails = (req, res) => {
     }
   });
   
-
+res.status(200).json({
+  status:"upload_failed"
 };
 
 //=================================================
