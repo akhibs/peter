@@ -168,7 +168,7 @@ export default function AddNewPackage() {
         //===================
       }
     } catch (e) {
-      setErrorMsg("An Error Occured Please try again");
+      setErrorMsg(e.message);
       setTimeout(() => {
         setErrorMsg("");
         setIsSubmit(false);
