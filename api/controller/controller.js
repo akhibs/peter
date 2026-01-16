@@ -15,7 +15,7 @@ exports.addDetails = (req, res) => {
   if (imageName === ""){
     res.status(200).json({
       status:"no_image"
-    })
+    });
 
   //==========================================
 
@@ -127,6 +127,7 @@ exports.addDetails = (req, res) => {
   
 res.status(200).json({
   status:"upload_failed"
+});
 };
 
 //=================================================
