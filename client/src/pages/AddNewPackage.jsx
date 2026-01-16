@@ -90,7 +90,7 @@ export default function AddNewPackage() {
     setIsSubmit(true);
     try {
       const formData = new FormData();
-      //formData.append("image", userImage);
+      formData.append("image", userImage);
       formData.append(
         "json",
         JSON.stringify({
