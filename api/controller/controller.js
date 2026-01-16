@@ -9,6 +9,7 @@ exports.handshake = (req, res) => {
 };
 
 exports.addDetails = (req, res) => {
+  /*
   let reqBody = {};
   let imageName = "";
 
@@ -110,10 +111,11 @@ exports.addDetails = (req, res) => {
           }
         });
         console.log("package added");
+        */
 
         res.status(200).json({
           status: "good",
-        });
+        }).send("good);
       }
     }
   });
