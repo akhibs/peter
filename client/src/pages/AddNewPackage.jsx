@@ -309,7 +309,7 @@ export default function AddNewPackage() {
         value={arrivalDate}
       />
       <p>User Image</p>
-      <input onChange={changeInput} name="userImage" type="file" />
+      <input onChange={changeInput} name="userImage" type="file", accept="image/*" />
       {isSubmit ? (
         <SpinnerCircular
           secondaryColor="#ffffff"
