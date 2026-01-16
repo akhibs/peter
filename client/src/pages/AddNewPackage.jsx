@@ -168,7 +168,7 @@ export default function AddNewPackage() {
         //===================
       }
     } catch (e) {
-      setErrorMsg(e.message);
+      setErrorMsg(e.name);
       setTimeout(() => {
         setErrorMsg("");
         setIsSubmit(false);
