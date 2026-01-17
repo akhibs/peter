@@ -1,0 +1,113 @@
+.AboutUsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.theAboutUsBox {
+  position: relative;
+  height: auto;
+  width: auto;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 10vw;
+}
+
+.theAboutUsBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  z-index: 1;
+}
+
+.theAboutUsBox .theAboutUsCover {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.theAboutUsCover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.theAboutUsCover p {
+  color: #f9f7f0;
+}
+.theAboutUsCover h3 {
+  font-size: clamp(30px, 5vw, 45px);
+  color: #f9f7f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.AboutUsPage img {
+  height: 40vw;
+  width: 30vw;
+  max-width: 400px;
+  min-width: 240px;
+  min-height: 300px;
+  max-height: 400px;
+  margin-inline: auto;
+}
+
+.writeup1 {
+  width: auto;
+  padding: 10px;
+}
+
+.writeup1 .p1 {
+  font-size: 1.7rem;
+}
+
+.writeup1 .p2 {
+  font-size: 0.8rem;
+  line-height: 30px;
+}
+
+.writeup2 {
+  width: auto;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.writeup2 h2 {
+  color: #c41e3a;
+}
+
+.writeup2 .p1 {
+  font-size: 1.7rem;
+}
+
+.writeup2 .p2 {
+  font-size: 0.8rem;
+  line-height: 30px;
+}
+
+.writeup2 img {
+  height: 30vw;
+  width: 30vw;
+
+  min-width: 250px;
+  min-height: 200px;
+  max-height: 300px;
+  margin-inline: auto;
+}

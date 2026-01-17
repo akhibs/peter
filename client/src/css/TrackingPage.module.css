@@ -1,0 +1,104 @@
+.horizontalLine {
+  background-color: #c41e3a;
+  width: 30%;
+  height: 5px;
+}
+
+.theTrackingBox {
+  position: relative;
+  height: auto;
+  width: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 10vw;
+}
+
+.theTrackingBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  z-index: 1;
+}
+
+.theTrackingBox .theTrackingCover {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.theTrackingCover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.theTrackingCover p {
+  color: white;
+}
+.theTrackingCover h3 {
+  font-size: clamp(30px, 5vw, 45px);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.searchBarBox {
+  display: flex;
+  width: 90%;
+  max-width: 600px;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: 40px;
+  margin-block-end: 400px;
+  gap: 1%;
+  border: #c41e3a 1px solid;
+  margin-inline: auto;
+  border-radius: 10px;
+  padding-inline: 7px;
+}
+
+.searchBar {
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  height: 50px;
+  color: black;
+  border: none;
+  padding-inline: 7%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.searchBar:focus {
+  outline-style: none;
+}
+
+.searchIcon {
+  color: #c41e3a;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.searchIcon:hover {
+  transform: scale(0.8);
+  transition: 0.2s;
+}
+
+.errorMsg {
+  color: rgba(179, 46, 46, 0.829);
+  font-size: 0.8rem;
+  width: 100%;
+  text-align: center;
+}

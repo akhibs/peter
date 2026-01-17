@@ -1,0 +1,35 @@
+.AddNewPackage p {
+  margin-block-start: 20px;
+  margin-block-end: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.AddNewPackage input {
+  width: 90%;
+  max-width: 400px;
+  height: 30px;
+}
+
+.AddNewPackage {
+  margin-block: 20px;
+  padding-inline: 5%;
+}
+
+.AddNewPackage button {
+  background-color: #178ca4;
+  color: #f9f7f0;
+  border: none;
+  width: 120px;
+  height: 45px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-block: 10px;
+  display: block;
+}
+.AddNewPackage span {
+  border: rgb(18, 173, 18) 2px solid;
+  color: green;
+  display: block;
+  font-weight: 600;
+}
