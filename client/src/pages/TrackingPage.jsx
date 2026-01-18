@@ -19,7 +19,7 @@ export default function TrackingPage() {
     setIsSubmit(true);
     try {
       // "https://eliteload.com.ng/id-search";
-      const searchForDetails = await fetch("http://127.0.0.1:3001/id-search", {
+      const searchForDetails = await fetch("https://eliteload.com.ng/id-search", {
         method: "POST",
         mode: "cors",
         cache: "default",
